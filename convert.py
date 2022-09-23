@@ -4,6 +4,9 @@ import numpy as np
 from yolov3_tf2.models import YoloV3, YoloV3Tiny
 from yolov3_tf2.utils import load_darknet_weights
 import tensorflow as tf
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
+tf.config.experimental.set_memory_growth(physical_devices[1], True)
 
 flags.DEFINE_string('weights', './data/yolov3.weights', 'path to weights file')
 flags.DEFINE_string('output', './checkpoints/yolov3.tf', 'path to output')

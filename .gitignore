@@ -138,3 +138,10 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/python
+
+
+# blime
+xxx
+yyy
+logdir
+data/voc*
